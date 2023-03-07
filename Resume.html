@@ -1,0 +1,692 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Josias de Paiva Barros</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="9dd26da0-6dd4-4647-918d-c32aaca43bf3" class="page sans"><header><img class="page-cover-image" src="https://images.folloze.com/image/upload/v1648084815/yvtx3s9zuspgfpbkhg7m.jpg" style="object-position:center 76.63%"/><h1 class="page-title">Josias de Paiva Barros</h1></header><div class="page-body"><h1 id="f4fff23f-fec3-43eb-b3ae-c63dbb75333d" class="">Salesforce Developer Jr.</h1><p id="f388b2fd-d4fe-45c1-a644-66c48a1db61a" class="">
+</p><div id="9f27c891-9f47-4e95-b820-9c12662ab7e1" class="column-list"><div id="a28b3c1a-2fad-439f-859e-2b5b37dc0956" style="width:50%" class="column"><h2 id="465cf4b4-0eb4-461e-8a66-08bee3ac12b7" class="">Informações pessoais</h2><ul id="8cb8e5f7-d78f-4079-8c9a-8a1c2dba7dfa" class="bulleted-list"><li style="list-style-type:disc">21 anos, Solteiro</li></ul><ul id="e1816d88-a1e9-49d1-ab88-29f9399c4752" class="bulleted-list"><li style="list-style-type:disc">WhatsApp<strong>:</strong>  +55 11 93226 1355</li></ul><ul id="86094d87-e1d3-4d47-bb63-bef750fd7a5b" class="bulleted-list"><li style="list-style-type:disc"><strong>Endereço:</strong> Rua Rio Grande, 84, Vila Rosália, Guarulhos, São Paulo, Brasil. - 07072-070 </li></ul></div><div id="80df0397-68a4-4bc7-93d7-debcd78dbf2b" style="width:50.00000000000004%" class="column"><h2 id="e6f741fc-89be-4f94-85ac-9bdd5634ec94" class="">Plataformas</h2><ul id="92414135-1759-4701-8c66-2c1071966f2f" class="bulleted-list"><li style="list-style-type:disc"><strong>LinkedIn: </strong><a href="https://www.linkedin.com/in/josiaspb/">https://www.linkedin.com/in/josiaspb/</a></li></ul><ul id="e44c6083-e355-4218-bd5c-92aa11f7d0db" class="bulleted-list"><li style="list-style-type:disc"><strong>Trailhead: </strong><a href="https://trailblazer.me/id/jbarros13">https://trailblazer.me/id/jbarros13</a></li></ul><p id="6cbe8db9-2f22-4932-8c98-3e65c451deb6" class="">
+</p></div></div><h1 id="62385901-6581-4fbf-8491-1a40bc831483" class="">Resumo</h1><p id="ee5cd2f0-a82a-483f-b98b-3b4b9dc8df34" class="">Estudante de Análise e Desenvolvimento de Sistemas com 2 anos de experiência com a plataforma Salesforce. Com conhecimento gerais em desenvolvimento e administração, busco melhores oportunidades onde vou poder aprender cada vez mais sobre TI e Desenvolvimento. </p><div id="72ee05a5-78c3-4e31-8334-896fdec15006" class="column-list"><div id="2a4e228c-5f12-45d3-b6dc-ef93a23687a2" style="width:50%" class="column"><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="e9ef7e54-18f6-4ff6-96f8-acec52295647"><div style="font-size:1.5em"><span class="icon">🧑‍💻</span></div><div style="width:100%"><em>Tecnologias</em></div></figure><p id="709db116-680b-420a-9d2d-0ca10ad6d857" class=""><strong>Flow Builder, Report Builder, Email Template, Campos e Relacionamentos:</strong></p><p id="6db23742-37d2-42da-8d98-c08ba1e18c21" class="">
+</p><p id="05e6b668-5ebd-442e-9abc-f00c1f9f6ec8" class="">
+</p><p id="d46e162e-9d65-4065-8085-2bd1686e60d6" class=""><strong>Apex, Assíncrono, Classe de Teste, LWC (Front): </strong></p><p id="31c86620-fec8-40db-a7bb-08d0a8414e90" class="">
+</p><p id="d7c6d6fb-aa21-42da-844d-b374305ab103" class="">
+</p><p id="a741df66-0b42-4126-a9bd-76a42720c7b2" class=""><strong>Git e Versionamento:</strong></p></div><div id="7f3eb607-2c26-4ca8-b816-928e1e69d6e6" style="width:50%" class="column"><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="b3ce779b-fe01-4ef5-9d5f-b8ed7a068883"><div style="font-size:1.5em"><span class="icon">👔</span></div><div style="width:100%"><em>Nível de experiência</em></div></figure><p id="d6053aaa-76a2-40f1-9568-c984d97688fa" class="">Capacidade de corrigir bugs e formular soluções do zero com o nível de complexidade Intermediário.</p><p id="827418a6-e6f4-4f64-b3c7-79978a9a2c33" class="">
+</p><p id="4cb3bac8-e18c-4f93-ad33-b7e19719db99" class="">
+</p><p id="a5ca5374-a65b-4ae5-ba95-8fefaf7adc61" class="">Boa leitura e noção de código, mas ainda aprendendo a escrever de acordo com a sintaxe.</p><p id="c7f4e50d-20cd-43bf-844f-777f829aa656" class="">
+</p><p id="229f20fe-3a71-472c-830b-98a55f5f3514" class="">Boa noção de comandos e versionamento de código.</p></div></div><p id="c4142ec5-4400-444a-be51-112e15c69f22" class="">Tive experiência prática com todas essas tecnologias e acredito ter autonomia em trabalhos de nível de dificuldade simples/intermediário. Com o apoio necessário, consigo realizar trabalhos de complexidade maior.</p><p id="6cd0a042-c4d7-40d6-8d92-910bd4253598" class="">
+</p><h1 id="5d629ea7-49a2-4042-bfc3-dec69e8ba0b4" class="">Formação acadêmica</h1><p id="577dfa1a-2d79-42f8-9dff-28c75d9ae923" class="">
+</p><div id="dffd5320-4c87-4410-9727-c38a09113570" class="column-list"><div id="eb7ed2de-0d9f-49ad-bf6c-d5910ee13c02" style="width:50%" class="column"><p id="3ac034c5-e67f-4dec-8abf-970944c5d4f1" class=""><mark class="highlight-blue"><strong>Análise e Desenvolvimento de Sistemas </strong></mark></p><p id="026090f8-5dd4-4cd8-9847-6b68355ff74e" class=""><em>Centro Universitário ENIAC</em></p><p id="f19f125f-e705-48d6-a242-f13623f1fca8" class=""><em>Completo.</em></p></div><div id="cad66538-e38b-49c1-b2af-fdb97570e8d0" style="width:50%" class="column"><p id="81fad3d3-3bdd-468b-babf-93689a96a82c" class=""><mark class="highlight-blue"><strong>Sistemas de Informação </strong></mark></p><p id="a41e353e-03cb-4311-a721-6304264230f8" class=""><em>Centro Universitário ENIAC</em></p><p id="34db30e2-6dc1-4e6a-9fd3-2456f022d59d" class=""><em>Cursando…</em></p></div></div><h1 id="22cb755f-c1fb-4bb7-a860-6fae11d4f27c" class="">Certificações</h1><p id="c4b12944-c412-4052-b5e3-4c74d3bafb9f" class="">
+</p><div id="5f166d5c-7ed3-40aa-b599-876f85cfd9f0" class="column-list"><div id="6e9a09ab-475c-472d-8b58-4558f26e87c6" style="width:50%" class="column"><p id="5fa1fb78-a3b9-4d1d-9999-f188965dd5c4" class=""><mark class="highlight-blue"><strong>Salesforce Marketing Cloud </strong></mark></p><p id="92f14d64-3e19-4594-9f54-d0e550d8c208" class=""><em>WeTeach – 4º Edição</em></p><p id="0fc8edf5-00c8-45ce-9c6d-da150569922c" class="">Completo.</p><p id="5128fe53-8b2a-4322-87a2-139237d2ec8b" class="">
+</p></div><div id="4d250e0e-eaa4-43bd-b748-c6ad6b599bb4" style="width:50%" class="column"><p id="11948052-3f7f-42a4-a25a-8b1a4c55be2e" class=""><mark class="highlight-blue"><strong>Desenvolvimento Web</strong></mark></p><p id="9b1aa687-2587-492d-8bc3-aa2ce520817d" class=""><em>SENAC</em></p><p id="6bafa7c7-270c-46df-a509-d108c351a153" class=""><em>Completo.</em></p><p id="6895e01d-2b6a-4d4e-a0ac-ef6f2dd9aef8" class="">
+</p></div></div><h1 id="c7871ea8-f2ab-41c2-9bdf-22305a1dfd4b" class="">Experiência profissional</h1><p id="48f4ba41-28bf-4754-b012-816a833b17b7" class="">
+</p><div id="5f9e5f7d-17b1-4dcf-830f-f392a7c82ce2" class="column-list"><div id="91fd4fb5-d32a-428e-9636-aded4c344f11" style="width:50%" class="column"><h2 id="32a914c3-da22-45ec-ad7f-8c29ec70fe42" class="">Everymind </h2><h3 id="c1ead9b3-7f4d-48e3-98b9-326803d6c27d" class="">Desenvolvedor Salesforce – Jr. </h3><p id="c9ecea92-760c-4080-a115-22ba49545a6e" class="">janeiro 2023 - Recente.</p><ul id="f83aada6-2b9f-4d99-93e9-c16167cb476f" class="bulleted-list"><li style="list-style-type:disc">{Responsabilidade 1}</li></ul><ul id="3af77374-1100-4492-9acc-294f7639445e" class="bulleted-list"><li style="list-style-type:disc">{Responsabilidade 2}</li></ul><ul id="ec10af53-1a98-49e7-8839-b3f1524739b9" class="bulleted-list"><li style="list-style-type:disc">{Responsabilidade 3}</li></ul></div><div id="64fc7e00-08e8-4d3e-8082-d96b2f1ab9b5" style="width:50%" class="column"><h2 id="e5a556e7-bf32-4d13-a6da-837fe7ca2623" class="">Mirante Tecnologia</h2><h3 id="4fd517b4-dcdf-4afc-8ad7-375d43a9970f" class="">Desenvolvedor Salesforce – Jr. </h3><p id="47133f62-5729-4806-9cd0-5f052107f4b1" class="">maio 2021 - {Data de término}</p><ul id="9e1545c7-8218-488a-a477-82550b8f9b39" class="bulleted-list"><li style="list-style-type:disc">{Responsabilidade 1}</li></ul><ul id="9670d1da-0323-48c6-8673-b52387cdf2da" class="bulleted-list"><li style="list-style-type:disc">{Responsabilidade 2}</li></ul><ul id="cc1d4aba-68af-43a5-bf68-7085e8b36ec4" class="bulleted-list"><li style="list-style-type:disc">{Responsabilidade 3}</li></ul></div></div><div id="c5e69f25-76b6-4cf7-9469-3d715caa3435" class="column-list"><div id="e0b7be33-c988-4c5b-b6bf-eb526b4d28dd" style="width:50%" class="column"><h2 id="18d50b16-1a12-488d-ae6d-576a5ca3ecaa" class="">Engeneering - Digital Company</h2><h3 id="0384f6a3-e380-4a13-b550-49367d6f547a" class="">Desenvolvedor Salesforce – Trainee</h3><p id="59342cea-5280-4be7-88cc-22156edbc174" class="">maio 2021 - {Data de término}</p><ul id="7de3c7d6-6724-4048-a86e-13adee637761" class="bulleted-list"><li style="list-style-type:disc">{Responsabilidade 1}</li></ul><ul id="66623499-7d1f-402c-b209-ecaa3b0828a2" class="bulleted-list"><li style="list-style-type:disc">{Responsabilidade 2}</li></ul><ul id="ae630571-f9f0-43e6-83c2-bd7c24b2dd50" class="bulleted-list"><li style="list-style-type:disc">{Responsabilidade 3}</li></ul></div><div id="e0cc9e61-74c1-41e9-8126-867131005bca" style="width:50%" class="column"><h2 id="df639302-d1fb-433c-b8b6-51d37d9c5611" class="">Consulado Britânico Geral - SP</h2><h3 id="83dd6385-0b91-44d0-a7d9-17a5302526f4" class="">Estagiário de Serviços Corporativos de TI</h3><p id="71533552-9439-4cb2-89a3-3c05651de966" class="">abril 2021 - julho 2021</p><ul id="0f79140b-52a9-47cd-b632-ffcbf06072fc" class="bulleted-list"><li style="list-style-type:disc">{Responsabilidade 1}</li></ul><ul id="64c4c737-23fe-419f-bff4-b6230dc7faad" class="bulleted-list"><li style="list-style-type:disc">{Responsabilidade 2}</li></ul><ul id="8e917bbb-f27a-4670-af5e-a591fd287b14" class="bulleted-list"><li style="list-style-type:disc">{Responsabilidade 3}</li></ul></div></div><h3 id="7708043a-a745-4069-8aef-89c5299560ec" class=""></h3><p id="826e4421-3ee5-49ae-bbbd-67f8f59bcd46" class="">
+</p><p id="c77b02c9-e707-4cdc-9ab4-f44fc0b7d43d" class="">
+</p><p id="a65ef462-f55c-46de-977a-a1e26eede13a" class="">
+</p><p id="a8b34b08-18be-4a39-affc-8c26944f3e29" class="">
+</p><p id="e6c35d39-a7b9-4b88-b64a-da5a74a5efe8" class="">
+</p><p id="6df5f25e-37aa-408d-839e-931dcd1b02a9" class="">
+</p><p id="2b535829-4246-4890-ba47-66392849a82e" class="">
+</p><p id="24201e5c-d484-4d70-aff3-023d0fc3fdc8" class="">
+</p></div></article></body></html>
